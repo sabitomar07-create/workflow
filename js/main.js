@@ -28,4 +28,8 @@ requestAnimationFrame(tick)}tick();
 // confetti
 function burst(px,py){if(rm)return;for(let i=0;i<14;i++){const s=document.createElement('span');s.className='star';s.textContent='✦';s.style.left=px+'px';s.style.top=py+'px';document.body.append(s);const a=Math.random()*6.28,d=60+Math.random()*90;s.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d+40}px) rotate(${Math.random()*360}deg) scale(.2)`,opacity:0}],{duration:900+Math.random()*500,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=()=>s.remove()}}
 addEventListener('click',e=>burst(e.clientX,e.clientY));
-$('#f').onsubmit=e=>{e.preventDefault();burst(innerWidth/2,innerHeight/2);const b=encodeURIComponent($('#m').value+'\n\n'+$('#n').value);location.href=`mailto:hello@vanthis.com?subject=New project from ${encodeURIComponent($('#n').value)}&body=${b}`;$('#f').innerHTML='<p style="margin:0;font:italic 28px var(--serif)">Thank you. Your email app should open now.</p>'};
+// contact form: set ENDPOINT (e.g. a Formspree URL) to deliver messages straight to your inbox; empty falls back to the visitor's email app
+const MAIL='Vanthis.studio@gmail.com',ENDPOINT='';
+$('#f').onsubmit=async e=>{e.preventDefault();burst(innerWidth/2,innerHeight/2);const n=$('#n').value,em=$('#e').value,msg=$('#m').value,f=$('#f'),say=t=>{f.innerHTML=`<p style="margin:0;font:italic 28px var(--serif)">${t}</p>`};
+if(ENDPOINT){try{const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:n,email:em,message:msg})});if(!r.ok)throw 0;say('Thank you. We will be in touch soon.')}catch(_){say('Something went wrong. Please email '+MAIL+'.')}return}
+location.href=`mailto:${MAIL}?subject=${encodeURIComponent('New project from '+n)}&body=${encodeURIComponent(msg+'\n\n'+n+' ('+em+')')}`;say('Thank you. Your email app should open now.')};
