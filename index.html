@@ -26,8 +26,10 @@
 <section class="scene s3"><div class="sun"><div class="ring r1"><i></i></div><div class="ring r2"><i></i></div></div><h2 class="split">We grow <em>it.</em></h2><p class="sub">Search, analytics and care after launch, so your site keeps rising.</p></section>
 
 <section class="scene s4"><h2 class="split">Say <em>hello.</em></h2>
-<form class="glass form" id="f"><input id="n" placeholder="Your name" required aria-label="Your name"><input id="e" type="email" placeholder="Work email" required aria-label="Work email"><textarea id="m" rows="3" placeholder="What are we building?" aria-label="Message"></textarea><button class="btn" type="submit">Send to Olympus</button></form></section>
+<form class="glass form" id="f"><div data-fs-success></div><div data-fs-error></div><input id="n" name="name" placeholder="Your name" required aria-label="Your name" data-fs-field><span data-fs-error="name"></span><input id="e" name="email" type="email" placeholder="Work email" required aria-label="Work email" data-fs-field><span data-fs-error="email"></span><textarea id="m" name="message" rows="3" placeholder="What are we building?" aria-label="Message" data-fs-field></textarea><span data-fs-error="message"></span><button class="btn" type="submit" data-fs-submit-btn>Send to Olympus</button></form></section>
 </div></main>
 <footer>© 2026 Vanthis. Crafted with care.</footer>
 
+<script>window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments)};formspree('initForm',{formElement:'#f',formId:'myewpvbb'});</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="js/main.js"></script></body></html>
