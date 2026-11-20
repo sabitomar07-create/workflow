@@ -1,6 +1,6 @@
 # Vanthis
 
-Website for **Vanthis**, a web design studio. A scroll-driven, playful site with an ancient Greek mythology look: five scenes, a living star field, spring-in headlines and a contact form.
+Website for **Vanthis**, a web design studio. A scroll-driven, playful site with an ancient Greek mythology look: six scenes, a living star field, spring-in headlines and a contact form.
 
 Plain HTML, CSS and JavaScript. No build step and no dependencies (only Google Fonts).
 
@@ -17,7 +17,7 @@ Then visit http://localhost:8000.
 ## Structure
 
 ```
-index.html            page markup (five scenes)
+index.html            page markup (six scenes)
 css/style.css         styles and design tokens (:root variables)
 js/main.js            scroll scenes, star field, cursor, confetti, form
 assets/               logos (original, and ivory version for dark backgrounds)

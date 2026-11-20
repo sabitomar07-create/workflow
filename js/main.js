@@ -3,10 +3,10 @@ const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('
 all('.split').forEach(el=>{el.setAttribute('aria-label',el.textContent);let i=0;const wrap=n=>[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(w=>{if(/^\s+$/.test(w))f.append(' ');else if(w){const d=document.createElement('span');d.className='w';d.setAttribute('aria-hidden','true');[...w].forEach(k=>{const s=document.createElement('span');s.className='ch';s.textContent=k;s.style.setProperty('--i',i++);d.append(s)});f.append(d)}});c.replaceWith(f)}else if(c.nodeType===1)wrap(c)});wrap(el)});
 const sc=all('.scene'),bg=all('.bg'),run=$('#run'),dots=$('.dots');
 sc.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Scene '+(i+1));b.onclick=()=>go(i);dots.append(b)});
-function go(i){scrollTo({top:run.offsetTop+(i+.35)/5*(run.offsetHeight-innerHeight),behavior:rm?'auto':'smooth'})}
+function go(i){scrollTo({top:run.offsetTop+(i+.35)/6*(run.offsetHeight-innerHeight),behavior:rm?'auto':'smooth'})}
 all('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();go(+a.dataset.go)});
 let cur=-1;
-function onScroll(){const q=Math.max(0,Math.min(5,(scrollY-run.offsetTop)/(run.offsetHeight-innerHeight)*5)),idx=Math.min(4,Math.floor(q));
+function onScroll(){const q=Math.max(0,Math.min(6,(scrollY-run.offsetTop)/(run.offsetHeight-innerHeight)*6)),idx=Math.min(5,Math.floor(q));
 sc.forEach((s,i)=>{s.style.setProperty('--sp',Math.max(0,Math.min(1,q-i+.15)));s.classList.toggle('on',i===idx)});
 bg.forEach((b,i)=>b.classList.toggle('on',i===idx));[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx));cur=idx}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
