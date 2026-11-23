@@ -1,43 +1,41 @@
-# Mister Fishing Gear
+# Vanthis
 
-Bilingual (English / Arabic) website for Mister Fishing Gear, a fishing-tackle shop at
-5 Ahmed Abd El-Latif, Sidi Beshr Bahri, Montaza 1, Alexandria Governorate 5517235, Egypt.
+Website for **Vanthis**, a web design studio. A scroll-driven, playful site with an ancient Greek mythology look: six scenes, a living star field, spring-in headlines and a contact form.
 
-Plain HTML, CSS and JavaScript. No build step.
-
-## Structure
-
-```
-index.html        page markup (all text in English and Arabic)
-css/style.css     styles, colour tokens (light + dark), responsive rules
-js/main.js        English / Arabic switch (sets lang + dir on <html>)
-js/scene.js       3D hero scene (three.js)
-favicon.svg
-```
+Plain HTML, CSS and JavaScript. No build step and no dependencies (only Google Fonts).
 
 ## Run locally
 
 Open `index.html` in a browser, or serve the folder:
 
-```
+```bash
 python3 -m http.server 8000
 ```
 
-then visit http://localhost:8000. Google Fonts and three.js (r128, cdnjs) load from their CDNs, so you need an internet connection.
+Then visit http://localhost:8000.
 
-## Editing content
+## Structure
 
-- Every text exists twice: `<span lang="en">...</span><span lang="ar">...</span>`. Edit both.
-- The language button toggles `lang` and `dir="rtl"` on `<html>`; CSS hides the other language. Layout uses logical properties, so right-to-left flips automatically.
-- Colours and fonts are CSS variables at the top of `css/style.css` (with dark-mode values).
-- The 3D scene falls back to the flat SVG artwork when WebGL is unavailable, and stays still when the visitor prefers reduced motion.
+```
+index.html            page markup (six scenes)
+css/style.css         styles and design tokens (:root variables)
+js/main.js            scroll scenes, star field, cursor, confetti, form
+assets/               logos (original, and ivory version for dark backgrounds)
+.github/workflows/    GitHub Pages deployment
+```
 
-## Placeholder content to replace
+## Edit the content
 
-- The six products in "Fresh on the shelf" (names, EGP prices, drawings) are fictional samples.
-- Product categories and marketing copy are assumptions.
-- Not yet included: phone / WhatsApp, opening hours, logo, real photos.
+- Headlines and copy: `index.html`. Letters animate automatically through the `split` class.
+- Colors and fonts: the `:root` block at the top of `css/style.css`.
+- Contact email: replace `hello@vanthis.com` in `js/main.js` with your real address.
 
-## Deploy
+## Deploy on GitHub Pages
 
-Any static host works. GitHub Pages: Settings > Pages > Deploy from a branch > `main` / `(root)`.
+1. Push this repo to GitHub on the `main` branch.
+2. Open **Settings > Pages** and set **Source** to **GitHub Actions**.
+3. Every push to `main` publishes the site.
+
+## License
+
+All rights reserved. The Vanthis name and logo are the property of Vanthis.
