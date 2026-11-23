@@ -1,38 +1,105 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vanthis – Web design studio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head><body>
-<header><a class="mark" href="#" aria-label="Vanthis"><img src="assets/logo-light.png" alt="Vanthis"></a><a class="btn" href="#" data-go="5">Say hello</a></header>
-<nav class="dots" aria-label="Sections"></nav><div class="cur" id="cur"></div>
+<title>Mister Fishing Gear – Sidi Beshr, Alexandria | معدات الصيد</title>
+<meta name="description" content="Fishing rods, reels, lines, lures and tackle in Sidi Beshr, Alexandria.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;600&family=Readex+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top" aria-label="Mister Fishing Gear"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#0e7c8f"/><path d="M18 6v14a5 5 0 0 1-10 0v-2" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="6" r="2" fill="#ffc93c"/></svg>Mister Fishing Gear</a>
+<nav>
+<a href="#gear"><span lang="en">Gear</span><span lang="ar">المعدات</span></a>
+<a href="#products"><span lang="en">Products</span><span lang="ar">المنتجات</span></a>
+<a href="#why"><span lang="en">Why us</span><span lang="ar">لماذا نحن</span></a>
+<a href="#visit"><span lang="en">Visit</span><span lang="ar">زيارتنا</span></a>
+</nav>
+<button class="langbtn" id="lang" type="button" lang="ar" aria-label="التبديل إلى العربية">العربية</button>
+</div></header>
 
-<main class="run" id="run"><div class="stage" id="stage">
-<div class="bg b0 on"></div><div class="bg b1"></div><div class="bg b2"></div><div class="bg b3"></div><div class="bg b4"></div><div class="bg b5"></div>
-<canvas id="sky" aria-hidden="true"></canvas>
-<div class="cloud" style="left:3%;top:64%"></div><div class="cloud" style="right:2%;top:20%;animation-duration:60s"></div>
-<div class="grid"><i style="left:8%;top:14%">+</i><i style="left:92%;top:14%">+</i><i style="left:8%;top:88%">+</i><i style="left:92%;top:88%">+</i></div>
-<svg id="ln" aria-hidden="true"><line id="l1" stroke="#fff" stroke-width="1.5"/><rect id="sq" width="12" height="12" fill="#0a3f93" stroke="#fff" stroke-width="1.5"/><circle id="an" r="4" fill="#fff"/></svg>
+<main id="top">
+<div class="hero">
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="sun" aria-hidden="true"></div>
+<svg class="float" viewBox="0 0 120 330" aria-hidden="true"><path d="M60 0V152" stroke="#fff" stroke-opacity=".75" stroke-width="2.5"/><ellipse cx="60" cy="190" rx="27" ry="40" fill="#fff"/><path d="M33 190A27 40 0 0 1 87 190Z" fill="#e4412f"/><path d="M60 230v46a13 13 0 1 0-13-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+<div class="wrap">
+<h1><span lang="en">Gear up for the catch.</span><span lang="ar">جهّز نفسك لصيدٍ موفّق.</span></h1>
+<p><span lang="en">Rods, reels, lines, lures and tackle for every angler, right here in Sidi Beshr, Alexandria.</span><span lang="ar">قصبات وبكرات وخيوط وطُعوم وكل مستلزمات الصيد لكل صياد، في قلب سيدي بشر بالإسكندرية.</span></p>
+<div class="cta">
+<a class="btn pri" href="#visit"><span lang="en">Get directions</span><span lang="ar">اعرف الطريق</span></a>
+<a class="btn sec" href="#gear"><span lang="en">Browse gear</span><span lang="ar">تصفّح المعدات</span></a>
+</div></div>
+<svg class="sea" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><path class="w1" d="M0 90C150 40 300 140 450 90S750 40 900 90s200 40 300-10V220H0Z"/><path class="w2" d="M0 130C150 90 300 170 450 130s300-40 450 0 200 40 300-5V220H0Z"/><path class="w3" d="M0 172C150 142 300 202 450 172s300-30 450 0 200 25 300-6V220H0Z"/></svg>
+</div>
 
-<section class="scene s0 on"><img src="assets/logo-light.png" alt="Vanthis"><h1 class="split">We build websites <em>worth a legend.</em></h1><p class="sub">Vanthis is a web design studio. Move your mouse: the stars listen.</p><a class="btn" href="#" data-go="5">Start a project</a></section>
+<section id="gear"><div class="wrap">
+<div class="head"><h2><span lang="en">Everything for a good day on the water</span><span lang="ar">كل ما تحتاجه ليوم موفّق على الماء</span></h2>
+<p class="lead"><span lang="en">From a first rod to a full boat kit, find it all in one shop.</span><span lang="ar">من أول قصبة إلى عدّة القارب الكاملة، تجدها كلها في محل واحد.</span></p></div>
+<div class="list">
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21 19 5"/><path d="M19 5c1.8 0 2 1.2 2 2.6V14"/><circle cx="21" cy="16.2" r="1.3"/></svg></div><div><h3><span lang="en">Rods</span><span lang="ar">القصبات</span></h3><p><span lang="en">Spinning, surf and telescopic rods for the shore, the pier and the boat.</span><span lang="ar">قصبات سبينج وسيرف وتلسكوبية للصيد من الشاطئ والرصيف والقارب.</span></p></div></div>
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M19 12h3M12 5V3"/></svg></div><div><h3><span lang="en">Reels</span><span lang="ar">البكرات</span></h3><p><span lang="en">Smooth, durable reels in sizes for every species and budget.</span><span lang="ar">بكرات سلسة ومتينة بمقاسات تناسب كل الأسماك وكل ميزانية.</span></p></div></div>
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12a4 4 0 0 1-8 0v-1"/><path d="M9.5 3h5"/></svg></div><div><h3><span lang="en">Lines and hooks</span><span lang="ar">الخيوط والسنانير</span></h3><p><span lang="en">Mono, braid and fluorocarbon lines, plus hooks, swivels and sinkers.</span><span lang="ar">خيوط مونو وجديل وفلوروكربون، إضافة إلى السنانير والمحاور والرصاص.</span></p></div></div>
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 9-6 13-3l5-3v12l-5-3c-4 3-10 2-13-3z"/><circle cx="8" cy="11" r=".8"/></svg></div><div><h3><span lang="en">Lures and baits</span><span lang="ar">الطُعوم الصناعية</span></h3><p><span lang="en">Artificial lures, jigs and ready-made rigs for every season.</span><span lang="ar">طُعوم صناعية وجيجز وتجهيزات جاهزة تناسب كل موسم.</span></p></div></div>
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18M11 13v2h2v-2"/></svg></div><div><h3><span lang="en">Tackle boxes and bags</span><span lang="ar">صناديق وحقائب العدّة</span></h3><p><span lang="en">Boxes, bags and rod holders to keep your gear organized.</span><span lang="ar">صناديق وحقائب وحوامل قصبات لتنظيم معدّاتك.</span></p></div></div>
+<div class="row"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="6"/><path d="M3 9h12M9 3v12M14 14l7 7"/></svg></div><div><h3><span lang="en">Accessories</span><span lang="ar">الإكسسوارات</span></h3><p><span lang="en">Pliers, nets, scales and all the small things that make a trip easier.</span><span lang="ar">كمّاشات وشباك وموازين وكل التفاصيل الصغيرة التي تسهّل رحلتك.</span></p></div></div>
+</div></div></section>
 
-<section class="scene s1"><div class="pils" id="pils"><div class="pil" style="--k:.7"></div><div class="pil" style="--k:.9"></div><div class="pil" style="--k:1"></div><div class="pil" style="--k:.8"></div><div class="pil" style="--k:.95"></div></div><h2 class="split">We design <em>it.</em></h2><p class="sub">Layouts, type and motion drawn for your brand. Hover a column, it wobbles.</p></section>
+<section id="products"><div class="wrap">
+<div class="head"><h2><span lang="en">Fresh on the shelf</span><span lang="ar">جديد على الرفوف</span></h2>
+<p class="lead"><span lang="en">A preview of how the shop’s own range will look here. These sample items and prices are made up.</span><span lang="ar">معاينة لشكل منتجات المحل على الموقع. هذه المنتجات والأسعار تجريبية فقط.</span></p></div>
+<div class="prods">
+<article class="prod"><div class="pic t1"><span class="bdg"><span lang="en">New</span><span lang="ar">جديد</span></span><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M24 142 176 20" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M24 142l22-18" stroke="#ffc93c" stroke-width="9" stroke-linecap="round"/><path d="M60 114l14-11" stroke="#082a38" stroke-width="7" stroke-linecap="round"/><g fill="none" stroke="#fff" stroke-width="2"><circle cx="96" cy="84" r="4"/><circle cx="122" cy="63" r="3.4"/><circle cx="148" cy="42.5" r="2.8"/><circle cx="172" cy="23" r="2.2"/></g></svg></div>
+<h3><span lang="en">Corniche Surf Rod</span><span lang="ar">قصبة سيرف الكورنيش</span></h3><p><span lang="en">4.2 m, 3-piece carbon</span><span lang="ar">٤٫٢ متر، ٣ قطع كربون</span></p><span class="price"><span lang="en">EGP 2,450</span><span lang="ar">٢٬٤٥٠ ج.م</span></span></article>
+<article class="prod"><div class="pic t2"><span class="bdg"><span lang="en">Best seller</span><span lang="ar">الأكثر مبيعًا</span></span><svg viewBox="0 0 200 160" aria-hidden="true"><rect x="82" y="20" width="28" height="24" rx="6" fill="#082a38"/><circle cx="96" cy="84" r="46" fill="#082a38"/><circle cx="96" cy="84" r="32" fill="none" stroke="#ffc93c" stroke-width="5"/><circle cx="96" cy="84" r="11" fill="#ffc93c"/><path d="M96 84h62" stroke="#082a38" stroke-width="7" stroke-linecap="round"/><circle cx="160" cy="84" r="10" fill="#e4412f"/></svg></div>
+<h3><span lang="en">Pharos 4000 Reel</span><span lang="ar">بكرة فاروس ٤٠٠٠</span></h3><p><span lang="en">Spinning, 9+1 bearings</span><span lang="ar">سبينج، ٩+١ محامل</span></p><span class="price"><span lang="en">EGP 1,850</span><span lang="ar">١٬٨٥٠ ج.م</span></span></article>
+<article class="prod"><div class="pic t3"><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M48 42v76a52 12 0 0 0 104 0V42z" fill="#0e7c8f"/><path d="M48 62a52 12 0 0 0 104 0M48 82a52 12 0 0 0 104 0M48 102a52 12 0 0 0 104 0" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/><ellipse cx="100" cy="42" rx="52" ry="12" fill="#4dc8dc"/><ellipse cx="100" cy="42" rx="12" ry="3.5" fill="#062b3a"/></svg></div>
+<h3><span lang="en">Delta Braid X8</span><span lang="ar">خيط الدلتا جديل X8</span></h3><p><span lang="en">0.30 mm, 150 m spool</span><span lang="ar">٠٫٣٠ مم، بكرة ١٥٠ متر</span></p><span class="price"><span lang="en">EGP 420</span><span lang="ar">٤٢٠ ج.م</span></span></article>
+<article class="prod"><div class="pic t4"><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M26 80C52 46 104 40 144 66l30-22v72l-30-22C104 120 52 114 26 80Z" fill="#9db8c4"/><path d="M40 86c34 20 70 20 104 4" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/><path d="M80 58c-9 14-9 30 0 44" fill="none" stroke="#e4412f" stroke-width="5" stroke-linecap="round"/><circle cx="58" cy="72" r="6" fill="#fff"/><circle cx="58" cy="72" r="3" fill="#082a38"/><path d="M108 108v16a8 8 0 1 1-8-8" fill="none" stroke="#082a38" stroke-width="3" stroke-linecap="round"/></svg></div>
+<h3><span lang="en">Silver Sardine Lure</span><span lang="ar">طُعم السردين الفضي</span></h3><p><span lang="en">12 cm, floating</span><span lang="ar">١٢ سم، طافٍ</span></p><span class="price"><span lang="en">EGP 165</span><span lang="ar">١٦٥ ج.م</span></span></article>
+<article class="prod"><div class="pic t1"><svg viewBox="0 0 200 160" aria-hidden="true"><path d="M76 62V48a24 24 0 0 1 48 0v14" fill="none" stroke="#082a38" stroke-width="7" stroke-linecap="round"/><rect x="34" y="60" width="132" height="34" rx="12" fill="#082a38"/><rect x="34" y="94" width="132" height="42" rx="12" fill="#0b4658"/><rect x="88" y="86" width="24" height="16" rx="4" fill="#ffc93c"/><path d="M60 116h80" stroke="#4dc8dc" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg></div>
+<h3><span lang="en">Harbour Tackle Box</span><span lang="ar">صندوق عدّة الميناء</span></h3><p><span lang="en">3 trays, waterproof</span><span lang="ar">٣ أدراج، مقاوم للماء</span></p><span class="price"><span lang="en">EGP 640</span><span lang="ar">٦٤٠ ج.م</span></span></article>
+<article class="prod"><div class="pic t2"><svg viewBox="0 0 200 160" aria-hidden="true"><circle cx="84" cy="72" r="44" fill="none" stroke="#082a38" stroke-width="6"/><path d="M40 72h88M84 28v88M53 41l62 62M115 41L53 103" stroke="#082a38" stroke-width="2" opacity=".55"/><path d="M116 104l60 42" stroke="#e4412f" stroke-width="9" stroke-linecap="round"/></svg></div>
+<h3><span lang="en">Qaitbay Landing Net</span><span lang="ar">شبكة قايتباي</span></h3><p><span lang="en">Foldable, 60 cm hoop</span><span lang="ar">قابلة للطي، إطار ٦٠ سم</span></p><span class="price"><span lang="en">EGP 380</span><span lang="ar">٣٨٠ ج.م</span></span></article>
+</div>
+<div class="cta"><a class="btn pri" href="#visit"><span lang="en">Ask about any product in store</span><span lang="ar">اسأل عن أي منتج في المحل</span></a></div>
+</div></section>
 
-<section class="scene s2"><h2 class="split">We code <em>it.</em></h2><p class="sub">Fast on phones, accessible to everyone, and yours to keep.</p>
-<svg class="cn" viewBox="0 0 400 300" aria-hidden="true"><path pathLength="1" d="M40 40 110 150 200 265 290 150 360 40"/><path pathLength="1" d="M110 150 200 95 290 150"/><circle cx="40" cy="40" r="5"/><circle cx="110" cy="150" r="5"/><circle cx="200" cy="265" r="6"/><circle cx="290" cy="150" r="5"/><circle cx="360" cy="40" r="5"/><circle cx="200" cy="95" r="5"/></svg>
-<div class="glass code"><span class="ln" style="--n:0">site.load()&nbsp;&nbsp;// 0.8s</span><span class="ln" style="--n:1">a11y = "AAA"</span><span class="ln" style="--n:2">mobile.first = true</span><span class="ln" style="--n:3">launch() ✦</span></div></section>
+<section id="why" class="band"><div class="wrap">
+<h2><span lang="en">Why shop with us</span><span lang="ar">لماذا تتسوق معنا</span></h2>
+<div class="pts">
+<div><h3><span lang="en">For every angler</span><span lang="ar">لكل صياد</span></h3><p><span lang="en">Beginner or seasoned pro, you’ll find gear that fits your level and budget.</span><span lang="ar">سواء كنت مبتدئًا أو محترفًا، ستجد معدات تناسب مستواك وميزانيتك.</span></p></div>
+<div><h3><span lang="en">Made for our coast</span><span lang="ar">مناسبة لساحلنا</span></h3><p><span lang="en">Tackle chosen for fishing off Alexandria’s piers, beaches and boats.</span><span lang="ar">عدّة مختارة للصيد من أرصفة الإسكندرية وشواطئها وقواربها.</span></p></div>
+<div><h3><span lang="en">Friendly advice</span><span lang="ar">نصيحة صادقة</span></h3><p><span lang="en">Not sure what to pick? Drop by and we’ll help you choose.</span><span lang="ar">لست متأكدًا مما تختاره؟ مرّ علينا وسنساعدك في الاختيار.</span></p></div>
+</div></div></section>
 
-<section class="scene s3"><div class="merge" aria-hidden="true"><div class="mc a"><span>Design</span></div><div class="mc b"><span>Code</span></div><i class="spark">✦</i></div><h2 class="split">We combine <em>it.</em></h2><p class="sub">Design and code built together, so what we draw is exactly what ships.</p></section>
+<section id="visit"><div class="wrap visit">
+<div>
+<h2><span lang="en">Visit the shop</span><span lang="ar">زورونا في المحل</span></h2>
+<address>
+<span lang="en">5 Ahmed Abd El-Latif<br>Sidi Beshr Bahri, Montaza 1<br>Alexandria Governorate 5517235<br>Egypt</span>
+<span lang="ar">٥ شارع أحمد عبد اللطيف<br>سيدي بشر بحري، المنتزه أول<br>محافظة الإسكندرية ٥٥١٧٢٣٥<br>مصر</span>
+</address>
+<a class="btn pri" href="https://www.google.com/maps/search/?api=1&amp;query=Mister+Fishing+Gear%2C+5+Ahmed+Abd+El-Latif%2C+Sidi+Beshr+Bahri%2C+Alexandria%2C+Egypt" target="_blank" rel="noopener"><span lang="en">Open in Google Maps</span><span lang="ar">افتح في خرائط جوجل</span></a>
+</div>
+<a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Mister+Fishing+Gear%2C+5+Ahmed+Abd+El-Latif%2C+Sidi+Beshr+Bahri%2C+Alexandria%2C+Egypt" target="_blank" rel="noopener" aria-label="Google Maps">
+<div class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="#082a38"/></svg><span><span lang="en">Sidi Beshr Bahri, Alexandria</span><span lang="ar">سيدي بشر بحري، الإسكندرية</span></span></div>
+</a>
+</div></section>
+</main>
 
-<section class="scene s4"><h2 class="split">Websites we <em>made.</em></h2><p class="sub">Selected work, with more on the way.</p>
-<div class="works"><a class="work glass" style="--k:0;color:inherit;text-decoration:none" href="https://qahwa-cafetria.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit Qahwa coffee shop website"><div class="shot"></div><b>Qahwa</b><span>Coffee shop · Visit site ↗</span></a><article class="work glass" style="--k:1"><div class="shot"></div><b>Project name</b><span>Coming soon</span></article><article class="work glass" style="--k:2"><div class="shot"></div><b>Project name</b><span>Coming soon</span></article></div></section>
+<footer><div class="wrap">
+<span>© 2026 Mister Fishing Gear</span>
+<span><span lang="en">5 Ahmed Abd El-Latif, Sidi Beshr Bahri, Alexandria</span><span lang="ar">٥ شارع أحمد عبد اللطيف، سيدي بشر بحري، الإسكندرية</span></span>
+</div></footer>
 
-<section class="scene s5"><h2 class="split">Say <em>hello.</em></h2>
-<form class="glass form" id="f"><div data-fs-success></div><div data-fs-error></div><input id="n" name="name" placeholder="Your name" required aria-label="Your name" data-fs-field><span data-fs-error="name"></span><input id="e" name="email" type="email" placeholder="Work email" required aria-label="Work email" data-fs-field><span data-fs-error="email"></span><textarea id="m" name="message" rows="3" placeholder="What are we building?" aria-label="Message" data-fs-field></textarea><span data-fs-error="message"></span><button class="btn" type="submit" data-fs-submit-btn>Send to Olympus</button></form></section>
-</div></main>
-<footer>© 2026 Vanthis. Crafted with care.</footer>
-
-<script>window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments)};formspree('initForm',{formElement:'#f',formId:'maeodnbb'});</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-<script src="js/main.js"></script></body></html>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/scene.js"></script>
+</body>
+</html>
